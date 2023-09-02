@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import classNames from "utils/classNames";
 
 const Button = ({
    type = "button",
@@ -15,9 +16,11 @@ const Button = ({
    if (isLoading);
    return (
       <button
-         className={`inline-block py-4 text-center rounded-xl font-semibold min-h-[56px] ${className} ${
+         className={classNames(
+            "inline-block py-4 text-center rounded-xl font-semibold min-h-[56px]",
+            className,
             !!isLoading ? "opacity-50 pointer-events-none" : ""
-         }`}
+         )}
          type={type}
       >
          {child}

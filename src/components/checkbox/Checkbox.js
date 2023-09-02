@@ -1,20 +1,23 @@
 import React from "react";
 import PropTypes from "prop-types";
+import classNames from "utils/classNames";
 
 const Checkbox = ({ checked = false, onClick = () => {}, name, children }) => {
    return (
       <div className="flex flex-start gap-x-3">
          <div
-            className={`cursor-pointer p-1 w-5 h-5 border rounded text-white inline-flex items-center justify-center dark:border-darkStroke ${
+            className={classNames(
+               "cursor-pointer p-1 w-5 h-5 border rounded text-white inline-flex items-center justify-center dark:border-darkStroke",
                checked ? "bg-primary border-primary" : ""
-            }`}
+            )}
             onClick={onClick}
          >
             <input type="checkbox" className="hidden" name={name} />
             <span
-               className={`flex items-center justify-center ${
+               className={classNames(
+                  "flex items-center justify-center",
                   checked ? "" : "opacity-0 invisible"
-               }`}
+               )}
             >
                <svg
                   xmlns="http://www.w3.org/2000/svg"

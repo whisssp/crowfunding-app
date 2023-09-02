@@ -1,9 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
+import classNames from "utils/classNames";
 
 const FormGroup = ({ className, children }) => {
    return (
-      <div className={`flex flex-col gap-y-3 ${className}`}>{children}</div>
+      <div className={classNames("flex flex-col gap-y-3", className)}>
+         {children}
+      </div>
    );
 };
 
