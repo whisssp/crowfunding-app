@@ -1,12 +1,12 @@
 import React from "react";
 import DashboardSearch from "./DashboardSearch";
-import { Button } from "components/button";
 import DashboardFund from "./DashboardFund";
+import { Button } from "components/button";
 
 const DashboardTopbar = () => {
    return (
-      <div className="flex items-center">
-         <div className="flex items-center flex-1 gap-x-14">
+      <div className="flex items-center mb-8 ">
+         <div className="flex items-center flex-1 pl-3 gap-x-14">
             <img srcSet="/logo.png 2x" alt="crowfunding app" />
             <div className="w-full max-w-[458px]">
                <DashboardSearch></DashboardSearch>
@@ -14,7 +14,7 @@ const DashboardTopbar = () => {
          </div>
          <div className="flex items-center justify-end gap-x-10">
             <DashboardFund></DashboardFund>
-            <Button className="flex items-center justify-center py-3 text-sm text-white px-7 bg-secondary rounded-xl lg:text-base">
+            <Button href="/create-campaign" kind="secondary">
                Start a campaign
             </Button>
             <img

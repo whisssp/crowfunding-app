@@ -52,5 +52,5 @@ IconEyeToggle.propTypes = {
 };
 
 export default withErrorBoundary(IconEyeToggle, {
-   FallbackComponent: <ErrorComponent></ErrorComponent>,
+   FallbackComponent: ErrorComponent,
 });

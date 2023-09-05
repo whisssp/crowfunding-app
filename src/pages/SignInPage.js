@@ -79,7 +79,7 @@ const SignInPage = () => {
                   Forgot Password
                </span>
             </FormGroup>
-            <Button type="submit" className="w-full text-white bg-primary">
+            <Button type="submit" className="w-full" kind="primary">
                Sign in
             </Button>
          </form>
@@ -88,5 +88,5 @@ const SignInPage = () => {
 };
 
 export default withErrorBoundary(SignInPage, {
-   FallbackComponent: <ErrorComponent></ErrorComponent>,
+   FallbackComponent: ErrorComponent,
 });
